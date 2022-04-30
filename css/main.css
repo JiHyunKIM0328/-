@@ -1,0 +1,297 @@
+/* swiper 메인슬라이드 */
+#mainVisual .swiper-wrapper .swiper-slide a{display: block;}
+#mainVisual .swiper-wrapper .swiper-slide a img{width: 100%;}
+
+#mainVisual .swiper-button-prev{width: 70px; height: 70px; background: url(../images/imgRoll_prev.png) no-repeat;}
+#mainVisual .swiper-button-prev:hover{background-image: url(../images/imgRoll_prev_on.png);}
+
+#mainVisual .swiper-button-next{width: 70px; height: 70px; background: url(../images/imgRoll_next.png) no-repeat;}
+#mainVisual .swiper-button-next:hover{background-image: url(../images/imgRoll_next_on.png);}
+
+#mainVisual .swiper-button-prev::after,
+#mainVisual .swiper-button-next::after{font-size: 0;}
+
+/* 운영시간 */
+.mainTodayArea{padding: 25px 0; border-bottom: 1px solid #e1e1e1; text-align: center;}
+.mainTodayArea a{display: block;}
+.mainTodayArea .mTit{
+    display: inline-block; vertical-align: middle;
+    font-weight: 700; font-size: 18px; line-height: 31px; color: #000;
+    padding-left: 50px; margin-right: 30px;
+    background: url(../images/time_icon.png) no-repeat 0 0;
+}
+.mainTodayArea .timeArea{display: inline-block; vertical-align: middle;}
+.mainTodayArea .time{display: inline-block; vertical-align: middle; position: relative;}
+.mainTodayArea .time:last-child{margin-left: 20px; padding-left: 20px;}
+.mainTodayArea .time:last-child::before{ 
+    content: ""; display: block; position: absolute; left: 0; top: 50%;
+    width: 1px; height: 16px; margin-top: -8px;
+    background-color: #dedede;
+}
+.mainTodayArea .time .tit{float: left; font-size: 18px; color: #000;}
+.mainTodayArea .time .txt{float: left; margin-left: 20px; font-weight: 700; font-size: 18px; color: #000;}
+
+/* 공통  */
+.mainCon{padding: 120px 0;}
+.mainCon .inner{ width: 1170px; margin: 0 auto;}
+.mainCon .mainTit{
+    font-size: 40px; color: #000; text-align: center; 
+    position: relative; top: 150px; z-index: 2;
+    opacity: 0;
+    
+}
+.mainCon .mainTit br{display: none;}
+.mainCon .mainTxt{
+    font-size: 18px; text-align: center; margin-top: 30px; 
+    position: relative; top: 150px; z-index: 2;
+    opacity: 0;
+}
+
+/* 전시영역 */
+.mainCon1{background: url(../images/mainCon1_bg.jpg) no-repeat 50% 50%; background-size: cover; position: relative;}
+
+.mainCon1 .mainTit ,
+.mainCon1 .mainTxt {color: #fff;}
+
+.mainCon1 .mainCon1List{
+    margin-top: 60px;
+    position: relative; top: 150px; z-index: 2; 
+    opacity: 0;
+}
+.mainCon1 .mainCon1List::after{content: ""; display: block; clear: both;}
+.mainCon1 .mainCon1List li{float: left; width: 574px; margin-left: 22px;}
+.mainCon1 .mainCon1List li:first-child{margin-left: 0;}
+.mainCon1 .mainCon1List li a{display: block; position: relative;}
+.mainCon1 .mainCon1List li a::after{
+    content: ""; position: absolute; left:0; top: 0;
+    width: calc(100% - 4px); height: calc(100% - 4px); 
+    border: 2px solid rgba(255, 255, 255, 0);
+    transition: border .4s ease;
+    /* 트랜지션을 사용하면 속성을 서서히 부드럽게 변화시킬 수 있다. */
+}
+.mainCon1 .mainCon1List li a:hover::after{border: 2px solid rgba(255, 255, 255, 0.8);}
+.mainCon1 .mainCon1List li a .img{}
+.mainCon1 .mainCon1List li a .txtArea{text-align: center; padding: 30px 0;}
+.mainCon1 .mainCon1List li a .txtArea .tit{font-weight: 700; font-size: 22px; color: #fff;}
+
+.mainCon1 .mainCon1Bg{
+    position: absolute; left: 0; top: 0;  z-index: 1;
+    width: 100%; height: 100%;
+}
+.mainCon1 .mainCon1Bg .t1{
+    width: 100%; height: 100%; 
+    position: absolute; left: 0; top:0 ;
+    background: url(../images/mainCon1Bg_t1_img.jpg) no-repeat center center;
+    background-size: cover;
+    display: none;
+}
+.mainCon1 .mainCon1Bg .t2{
+    width: 100%; height: 100%;
+    position: absolute; left: 0; top:0 ;
+    background: url(../images/mainCon1Bg_t2_img.jpg) no-repeat center center;
+    background-size: cover;
+    display: none;
+}
+
+/* 프로그램 영역 */
+.mainCon2{
+    background: url(../images/mainCon2_bg.jpg) no-repeat 50% 50%; 
+    background-size: cover;
+}
+.mainCon2 .mainCon2List::after{content: ""; display: block; clear: both;}
+.mainCon2 .mainCon2List{
+    margin-top: 60px;
+    position: relative; top: 150px;
+    opacity: 0;
+}
+
+.mainCon2 .mainCon2List li{float: left; width: 375px; margin-left: 22px;}
+.mainCon2 .mainCon2List li:first-child{margin-left: 0;}
+.mainCon2 .mainCon2List li a{
+    display: block; 
+    transition: all 0.3s;
+}
+.mainCon2 .mainCon2List li a .imgArea{}
+.mainCon2 .mainCon2List li a .imgArea .pc{}
+.mainCon2 .mainCon2List li a .imgArea .mobile{display: none;}
+.mainCon2 .mainCon2List li a .txtArea{background-color: #fff; padding: 25px 25px 30px;}
+.mainCon2 .mainCon2List li a .txtArea .txt{font-weight: 700; font-size: 22px; color: #000; text-align: center;}
+.mainCon2 .mainCon2List li a:hover{
+    box-shadow: 20px 25px 40px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 20px 25px 40px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 20px 25px 40px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 20px 25px 40px rgba(0, 0, 0, 0.2);
+}
+.mainCon2 .mainCon2List li a:hover .txtArea{background-color: #1c7c57;}
+.mainCon2 .mainCon2List li a:hover .txtArea .txt{color: #fff;}
+
+/* 소식영역 */
+.mainCon3{}
+.mainCon3 .mainNews::after{content: ""; display: block; clear: both;}
+.mainCon3 .mainNews{
+    margin-top: 60px;
+    position: relative; top: 150px;
+    opacity: 0;
+}
+
+.mainCon3 .mainNews .left{float: left; width: 492px; padding: 40px; border: 1px solid #d9d9d9; position: relative;}
+.mainCon3 .mainNews .left .tit{font-weight: 700; font-size: 22px; color: #000;}
+.mainCon3 .mainNews .left .newsCon{margin-top: 30px;}
+.mainCon3 .mainNews .left .newsCon .tit{font-weight: 400; font-size: 20px; }
+.mainCon3 .mainNews .left .newsCon .date{color: #888; margin-top: 70px;}
+.mainCon3 .mainNews .left .newsList{margin-top: 27px; padding-top: 27px; border-top: 1px solid #d9d9d9;}
+.mainCon3 .mainNews .left .newsList li{line-height: 28px;}
+.mainCon3 .mainNews .left .newsList li a{
+    display: inline-block; width: calc(100% - 80px);
+    font-size: 18px; color: #000;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.mainCon3 .mainNews .left .newsList li a:hover{text-decoration:underline;}
+
+.mainCon3 .mainNews .left .newsList li .date{float: right; color: #555; }
+.mainCon3 .mainNews .left .newsMoreBt{
+    display: inline-block;
+    line-height: 30px; 
+    padding-right: 30px;
+    position: absolute; right: 40px; top: 40px;
+    background: url(../images/newsMoreBt_icon.png) no-repeat right center;
+
+}
+
+.mainCon3 .mainNews .left .newsMoreBt::before{
+   content: "더보기"; display: block;
+}
+
+.mainCon3 .mainNews .right{width: 574px; float: right;}
+.mainCon3 .mainNews .right .utilDiv{}
+.mainCon3 .mainNews .right .utilDiv::after{content: ""; display: block; clear: both;}
+.mainCon3 .mainNews .right .utilDiv a{
+    display: block; width: 276px; float: left; margin-left: 22px;
+    padding-top: 128px; padding-bottom: 40px;
+    border: 1px solid #d9d9d9; 
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 700; color: #000; 
+}
+.mainCon3 .mainNews .right .utilDiv a:first-child{
+    margin-left: 0;
+    background: url(../images/mainCon3_util1_img1.png) no-repeat center 40px;
+}
+
+.mainCon3 .mainNews .right .utilDiv a:last-child{
+    background: url(../images/mainCon3_util1_img2.png) no-repeat center 40px;
+}
+
+.mainCon3 .mainNews .right .bannerDiv{ 
+    padding: 40px; margin-top: 22px;
+    background: url(../images/mainCon3_banner.jpg) no-repeat center center;
+}
+.mainCon3 .mainNews .right .bannerDiv .tit{font-size: 32px;  line-height: 38px; color: #fff; }
+
+.mainCon3 .mainNews .right .bannerDiv a{ 
+    display: inline-block; padding-right: 39px;
+    margin-top: 20px; font-weight: 700;color: #fff;
+    background: url(../images/mainCon3_banner_icon.png) no-repeat right center;
+}
+
+/* 미디어쿼리 시작 최소 1001px 부터 ~ 최대 1200px 까지 */
+@media screen and (max-width:1200px) {
+    .mainCon .inner{ width: 950px;}
+    .mainCon1 .mainCon1List li{width: 464px;}
+    .mainCon1 .mainCon1List li a .img{width: 100%;}
+    .mainCon1 .mainCon1List li a .img img{width: 100%;}
+
+    .mainCon2 .mainCon2List li{width: 302px;}
+    .mainCon2 .mainCon2List li a .imgArea img{width: 100%;}
+
+    .mainCon3 .mainNews .left{width: 384px;}
+    .mainCon3 .mainNews .left .newsCon .date{font-size: 14px;}
+    .mainCon3 .mainNews .left .newsList li a{font-size: 14px;}
+    .mainCon3 .mainNews .left .newsList li .date{font-size: 14px;}
+    .mainCon3 .mainNews .left .newsMoreBt::before{ font-size: 15px;}
+
+    .mainCon3 .mainNews .right{width: 462px;}
+    .mainCon3 .mainNews .right .utilDiv a{width: 220px;}
+    .mainCon3 .mainNews .right .bannerDiv .tit{font-size: 28px; line-height: 34px; }
+
+}/*  1001px ~ 1200px 까지 */
+
+/* 최소 759px 부터 최대 1000px 까지 */
+@media screen and (max-width:1000px) {
+    .mainCon .inner{ width: auto; padding: 0 5%;}
+    .mainCon .mainTit{font-size: 30px;}
+
+    .mainCon1 .mainCon1List li{float: left; width: 100%; margin-left: 0; margin-top: 15px;}
+    .mainCon1 .mainCon1List li:first-child{margin-top: 0;}
+
+    .mainCon2 .mainCon2List li{width: 32%; margin-left: 2%;}
+    .mainCon2 .mainCon2List li a .txtArea{padding: 25px;}
+    .mainCon2 .mainCon2List li a .txtArea .txt{font-size: 20px;}
+    .mainCon2 .mainCon2List li a .imgArea .pc{display: none;}
+    .mainCon2 .mainCon2List li a .imgArea .mobile{display: block;}
+    .mainCon3 .mainNews .left{float: none; width: 100%; box-sizing: border-box; }
+    .mainCon3 .mainNews .right{float: none; width: 100%; margin-top:20px;}
+    .mainCon3 .mainNews .right .utilDiv a{width: 48.5%;  margin-left: 0;padding-top: 110px; padding-bottom: 30px;}
+    .mainCon3 .mainNews .right .utilDiv a:first-child{margin-right: 3%; background-size: 40px auto;}
+    .mainCon3 .mainNews .right .utilDiv a:last-child{background-size: 40px auto;}
+    .mainCon3 .mainNews .right .bannerDiv{ margin-top: 20px; background-size: cover;}
+
+}/*  759px ~ 1000px 까지 */
+
+/* 최소 451px 부터 최대 758px 까지 */
+@media screen and (max-width:758px) {
+    .mainTodayArea .mTit{font-size: 13px;padding-left: 20px;background-size:15px auto ;background-position: 0 8px;}
+    .mainTodayArea .time .tit{font-size: 13px;}
+    .mainTodayArea .time .txt{font-size: 13px;}
+
+    .mainCon .mainTit{font-size: 23px; line-height: 30px;}
+    .mainCon .mainTit br{display: block;}
+    .mainCon .mainTxt{display: none;}
+
+    .mainCon1{padding: 60px 0 50px;}
+    .mainCon1 .mainCon1List{margin-top: 25px;}
+    .mainCon1 .mainCon1List li a .txtArea{padding: 15px 0;}
+    .mainCon1 .mainCon1List li a .txtArea .tit{font-size: 14px;}
+
+    .mainCon2{padding: 60px 0 50px;}
+    .mainCon2 .mainCon2List{margin-top: 25px;}
+    .mainCon2 .mainCon2List li{width: 48.5%; margin-left: 3%;}
+    .mainCon2 .mainCon2List li:nth-of-type(3){clear: both; float: none; padding-top: 10px; margin: 0 auto;}
+    .mainCon2 .mainCon2List li a .txtArea{padding: 15px 5%;}
+    .mainCon2 .mainCon2List li a .txtArea .txt{font-size: 14px;}
+
+    .mainCon3{padding: 60px 0 50px;}
+    .mainCon3 .mainNews{margin-top: 25px;}
+    .mainCon3 .mainNews .left{padding: 20px 4%;}
+    .mainCon3 .mainNews .left .tit{font-size: 14px;}
+    .mainCon3 .mainNews .left .newsCon{margin-top: 15px;}
+    .mainCon3 .mainNews .left .newsCon .tit{font-size: 13px; }
+    .mainCon3 .mainNews .left .newsCon .date{font-size:12px; margin-top: 70px;}
+    .mainCon3 .mainNews .left .newsList{margin-top: 15px; padding-top: 10px;}
+    .mainCon3 .mainNews .left .newsList li{line-height: 22px;}
+    .mainCon3 .mainNews .left .newsMoreBt{position: absolute; right: 4%; top: 20px;}
+    .mainCon3 .mainNews .left .newsMoreBt::before{ text-indent: -9999px;}
+    .mainCon3 .mainNews .right{margin-top:10px;}
+    .mainCon3 .mainNews .right .bannerDiv{ margin-top: 10px;}
+    .mainCon3 .mainNews .right .bannerDiv .tit{font-size: 20px;  line-height: 25px; }
+    .mainCon3 .mainNews .right .bannerDiv a{ 
+        font-size: 14px; padding-right: 20px; 
+        background-size: 15px auto;
+    }
+    
+}/* 451px ~ 758px */
+
+/* 모바일 최소 해상도 부터 최대 450px 까지 */
+@media screen and (max-width:450px) {
+    .mainTodayArea{padding: 10px 0; position: relative; border: 1px solid red;}
+    .mainTodayArea a{border: 3px solid green; display: inline-block; }
+    .mainTodayArea .time{
+        min-width: 140px; display: block; 
+        overflow: hidden; line-height: 43px;
+    }
+    .mainTodayArea .time:last-child{padding-left: 0; margin-left: 0;}
+    .mainTodayArea .time:last-child::before{ 
+        position: static;
+        width: 170px; height: 1px; margin-top: 0;
+    }
+}

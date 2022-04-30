@@ -1,0 +1,317 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+
+body{font-family: 'Noto Sans KR', sans-serif; font-weight: 300; font-size: 16px; line-height: 1; letter-spacing: -0.6px; color: #555; min-height: 100vh;}
+
+/* 초기화 */
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+img{vertical-align: top;}
+a{text-decoration: none; color: #555;}
+
+
+/* 데스크탑 퍼스트 1201px 부터 모든 데스크탑 해상도 너비 까지 */
+
+/* 공통 */
+.container{ width: 1170px; margin: 0 auto;}
+
+#wrapper{position: relative;}
+#wrapper .topBtn{position: absolute; bottom: 355px; right: 40px; }
+
+
+/* 헤더 유틸리티 메뉴 */
+#util{}
+#util .container{padding: 11px 0 9px;}
+#util .container::after{content: ""; display: block; clear: both;}
+#util .container .right{float: right;}
+#util .container .right .links{float: left;}
+#util .container .right .links a{
+    display: inline-block; padding-left: 9px; margin-left: 8px;
+    font-size: 15px; line-height: 26px; color: #000;
+    position: relative;
+}
+#util .container .right .links a:hover{color: #1c7c57;}
+
+#util .container .right .links a:first-child{padding-left: 0; margin-left: 0;}
+#util .container .right .links a::before{
+    content: ""; display: inline-block; width: 1px; height: 13px; 
+    position: absolute; left: 0; top: 50%;
+    margin-top: -6.5px;
+    background-color: #e1e1e1;
+}
+#util .container .right .links a:first-child::before{ display: none;}
+
+#util .container .right .login{float: left; margin-left: 30px;}
+#util .container .right .login a{display: inline-block; font-weight: 500; font-size: 15px; line-height: 26px;}
+#util .container .right .login a:hover{color: #000;}
+
+/* 헤더 gnbBg */
+#header{
+    position: relative; border-bottom: 1px solid #e1e1e1;
+}
+
+#header.fixed{
+    position: fixed; top: 0; left: 0;
+    background-color: #fff;
+    width: 100%; z-index: 100;  
+}
+#header.fixed .container{ padding-top: 30px;}
+#header.fixed .gnbBg{top: 103px;}
+
+#header .gnbBg{
+    position: absolute; left: 0; top: 70px; z-index: 10;
+    width: 100%; height: 425px;
+    background-color: #fff;
+    border-top: 2px solid #1c7c57;
+    display: none;
+}
+
+
+/* 헤더 gnb */
+#header .container{position: relative; z-index: 20;}
+#header .container::after{content: ""; display: block; clear: both;}
+#header h1{float: left; position: relative; left: 0; top: -22px;}
+#header .gnbArea{float: left; margin-left: 175px;}
+#header .gnbArea .gnb{}
+#header .gnb > li{
+    float: left; 
+    padding: 0 40px; 
+    position: relative;
+}
+#header .gnb > li > a{
+    display: block; padding: 15px 0 38px;
+    font-weight: 500; font-size: 18px; color: #000;
+    position: relative;
+}
+
+#header .gnb > li.on > a{color: #1c7c57;}
+#header .gnb > li.on > a::after{
+    content: ""; display: block;
+    width: 20px; height: 12px;
+    background:url(../images/gnb_on_icon.png) no-repeat 50% 50%;
+    position: absolute; left: 50%; bottom: 0;
+    margin-left: -10px;
+}
+
+#header .gnb > li .twoD{
+    position: absolute; left: 50%; top: 72px; 
+    width: 100%; padding: 35px 0;
+    transform: translate(-50% , 0);
+    display: none;
+}
+#header .gnb > li .twoD > ul{position: relative; left: 40px;}
+#header .gnb > li .twoD > ul > li{}
+#header .gnb > li .twoD > ul > li > a{
+    display: block; padding: 15px 0;
+    font-size: 18px; 
+    color: #000;
+}
+
+#header .gnb > li .twoD > ul > li > a.thrBt{}
+#header .gnb > li .twoD > ul > li > a.thrBt span{
+    display: inline-block;
+    position: relative;
+}
+#header .gnb > li .twoD > ul > li > a.thrBt span::after{
+    content: ""; display: block; width: 20px; height: 20px;
+    background: url(../images/thrBt_bg.png) no-repeat center center;
+    position: absolute; right: -28px; top: 0;
+}
+#header .gnb > li .twoD > ul > li > a.thrBt.on span::after{
+    background-image: url(../images/thrBt_bg_on.png);
+}
+
+#header .gnb li .twoD  ul  li .thrD{display: none;}
+#header .gnb li .twoD  ul  li .thrD ul{}
+#header .gnb li .twoD  ul  li .thrD ul li{}
+#header .gnb li .twoD  ul  li .thrD ul li a{
+    display: block;
+    line-height: 24px; color: #888;
+}
+
+/* 모바일 헤더 */
+.mHeader{display: none;}
+.mMenuArea{display: none;}
+
+/* 푸터 */
+#footer{border-top: 1px solid #d9d9d9;}
+#footer .container{ padding: 50px 0 130px;}
+#footer .container .top{padding-bottom: 30px; border-bottom: 1px solid #e1e1e1;}
+#footer .container .top .links{overflow: hidden;}
+#footer .container .top .links a{float: left; margin-left: 20px; line-height: 30px; color: #333;}
+#footer .container .top .links a:first-child{margin-left: 0;}
+#footer .container .top .links a.cRed{color: #e10000;}
+
+#footer .container .bottom{margin-top: 30px;}
+#footer .container .bottom::after{content: ""; display: block; clear: both;}
+#footer .container .bottom .left{float: left;}
+#footer .container .bottom .left p{font-size: 15px; margin-top: 10px;}
+#footer .container .bottom .left p:first-child{margin-top: 0;}
+#footer .container .bottom .left p span{ display: inline-block; margin-left: 11px; padding-left: 11px; position: relative;}
+#footer .container .bottom .left p span:first-child{margin-left: 0; padding-left: 0;}
+#footer .container .bottom .left p span::before{
+    content: ""; position: absolute; left: 0; top: 50%; margin-top: -6.5px;
+    width: 1px; height: 13px; background-color: #e0e0e0;
+}
+#footer .container .bottom .left p span:first-child::before{display: none;}
+#footer .container .bottom .left p.copyright{margin-top: 30px; color: #777;}
+
+#footer .container .bottom .familyStie{float: right;}
+#footer .container .bottom .familyStie #selectFamilySite{
+    width: 210px; height: 45px; border: 1px solid #e0e0e0;
+    padding-left: 20px; padding-right: 35px;
+    font-family: 'Noto Sans KR'; font-size: 15px; color: #555;
+    appearance: none;
+    background: url(../images/sel_icon.png) no-repeat right 17px top 50%;
+}
+
+
+/* 미디어쿼리 시작 최소 1001px 부터 ~ 최대 1200px 까지 - 태블릿 */
+@media screen and (max-width : 1200px) {
+    .container{ width: 950px;}
+    #header .gnbArea{margin-left: 120px;}
+    #header .gnb > li{padding-left: 30px;}
+    #header .gnb > li > a{padding: 20px 0 36px; font-size: 16px;}
+    #header .gnb > li .twoD > ul{left: 30px;}
+    #header .gnb > li .twoD > ul > li > a{font-size: 16px;}
+
+    #footer .container{width: 950px;}
+
+}/*  1001px ~ 1200px 까지 */
+
+/* 최소 759px 부터 ~ 최대 1000px 까지 - 모바일 가로모드 */
+@media screen and (max-width : 1000px) {
+    .container{ width: auto;}
+    #util{display: none;}
+    #header{display: none;}
+    .mHeader{display: block;}
+    .mHeader > div{border-bottom: 1px solid #e1e1e1; position: relative; height: 100px;}
+    .mHeader .menuBtn{position: absolute; left: 30px; top: 50%; transform: translateY(-50%);}
+    .mHeader .logo{position: absolute; left: 50%; top: 50%; transform: translate(-50% , -50%);}
+
+    .mMenuArea{
+        display: block; position: fixed; left: -100%; top: 0; 
+        width: 100%; height: 100vh; 
+        z-index: 3;
+        background-color: #fff; 
+    }
+    .mMenuArea .top{background-color: rgb(28, 124, 87); height: 100px; position: relative;}
+    .mMenuArea .top .loginBt{
+        position: absolute; left: 30px; top: 50%;  
+        padding-left: 50px; height: 38px; 
+        font-weight: 400; font-size:26px; line-height: 36px; color: #fff;
+        background: url(../images/m_login_icon.png) no-repeat 0 0;
+        transform: translateY(-50%);
+    }
+    .mMenuArea .top .closeBt{position: absolute; right: 30px; top: 50%; transform: translateY(-50%);}
+    .mMenuArea .links{}
+    .mMenuArea .links > div{border-bottom: 1px solid #e1e1e1; overflow: hidden;}
+    .mMenuArea .links > div a{
+        display: block; width: 50%; height: 100px; float: left; 
+        border-left: 1px solid #e1e1e1;
+        box-sizing: border-box;
+        text-indent: -9999px;
+    }
+    .mMenuArea .links > div a:first-child{border-left: 0;}
+    .mMenuArea .links > div a.lotteworld{ background:#f8f8f8 url(../images/m_lotteworld_btn.gif) no-repeat 50% 50%;}
+    .mMenuArea .links > div a.icerink{ background: #f8f8f8 url(../images/m_icerink_btn.gif) no-repeat 50% 50%;}
+    
+    .mMenuArea .gnbArea{}
+    .mMenuArea .gnbArea .oneD{
+        display: block; padding: 30px 38px; border-bottom: 1px solid #e1e1e1;
+        font-weight: 700; font-size: 26px;
+        background: #f2f2f2 url(../images/m_oneD_icon.png) no-repeat 95% 35px;
+        /* background-size: 20px auto; */
+    }
+
+    .mMenuArea .gnbArea .oneD.on{ 
+        color: #1b7d58;
+        background-image: url(../images/m_oneD_icon_on.png);
+        background-position: 95% center;
+    }
+
+
+    .mMenuArea .gnbArea .twoD{
+        padding: 0 30px; 
+        background-color: #f2f2f2; 
+        border-bottom: 1px solid #e1e1e1;
+        display: none;
+    }
+    .mMenuArea .gnbArea .twoD > a{ 
+        display: block; padding: 20px; font-size: 22px; color: #000;
+        border-bottom: 1px solid #dadada;
+    }
+    .mMenuArea .gnbArea .twoD > a.thrBt{
+        background: url(../images/thrBt.png) no-repeat 95% 50%;
+        background-size: 30px auto;
+    }
+
+    .mMenuArea .gnbArea .twoD > a.thrBt.on{
+        background-image: url(../images/thrBt_bg_on.png);
+    }
+
+    .mMenuArea .gnbArea .twoD .thrD{ 
+        padding: 15px 40px;
+        display: none;
+    }
+    .mMenuArea .gnbArea .twoD .thrD a{ display: block; padding: 15px 0; font-size: 18px;}
+
+    #footer .container{padding: 50px 3% 160px; width: auto;}
+    #footer .container .top{padding-bottom: 0; border-bottom: 0;}
+
+    #footer .container .bottom{margin-top: 25px; padding-top: 65px; position: relative;}
+    #footer .container .bottom .left{float: none;}
+    #footer .container .bottom .familyStie{
+        float: none; position: absolute; left: 0; top: 0;
+        width: 100%; height: 46px;
+    }
+
+    #wrapper .topBtn{bottom: 414px; right: 3%;}
+
+}/* 759px ~ 1000px */
+
+/* 최대 758px 까지 - 모바일 세로모드 */
+@media screen and (max-width : 758px){
+    .mHeader > div{height: 50px;}
+    .mHeader .menuBtn{left: 15px;}
+    .mHeader .menuBtn img{width: 25px; height: auto;}
+    .mHeader .logo img{width: 57px; height: auto;}
+    .mMenuArea .top{height: 50px;}
+    .mMenuArea .top .loginBt{left: 3%; padding-left: 25px; height: 20px; font-size:14px; line-height: 18px; background-size: 15px auto;}
+    .mMenuArea .top .closeBt{right: 3%;}
+    .mMenuArea .top .closeBt img{width: 15px; height: auto;}
+    .mMenuArea .links > div a{height: 60px;}
+    .mMenuArea .links > div a.lotteworld{ background-size: 132px auto; }
+    .mMenuArea .links > div a.icerink{ background-size: 80px auto; }
+    .mMenuArea .gnbArea .oneD{padding: 20px 15px;font-size: 17px; background: #f2f2f2 url(../images/m_oneD_icon.png) no-repeat 95% 22px; background-size: 15px auto;}
+    .mMenuArea .gnbArea .twoD{padding: 0 15px;}
+    .mMenuArea .gnbArea .twoD > a{ padding: 13px 15px; font-size: 16px;}
+    .mMenuArea .gnbArea .twoD > a.thrBt{background-position: right 15px top 50%; background-size: 20px auto;}
+    .mMenuArea .gnbArea .twoD .thrD{ padding: 10px 20px;}
+    .mMenuArea .gnbArea .twoD .thrD a{padding: 10px 0; font-size: 15px;}
+    
+    #footer .container{padding: 25px 3% 45px;}
+    #footer .container .top .links a{
+        float: left;
+        margin-left: 0; margin-right: 8px; font-size: 13px; line-height: 26px; 
+        letter-spacing: -1.2px;
+    }
+
+    #footer .container .bottom{margin-top: 15px; padding-top: 55px;}
+    #footer .container .bottom .left p{
+        margin-top: 0; font-size: 13px; line-height: 22px; letter-spacing: -1.2px; 
+        overflow: hidden;
+    }
+    #footer .container .bottom .left p span{float: left; margin-left: 6px; padding-left: 6px;}
+    #footer .container .bottom .left p.copyright{margin-top: 15px; font-size: 13px;}
+    #wrapper .topBtn{bottom: 246px; }
+    #wrapper .topBtn img{width: 50px;}
+
+}/* 758px 까지 */
+
+/* 최대 450px 까지 - 모바일 */
+@media screen and (max-width : 450px){
+    #wrapper .topBtn{bottom: 268px;}
+}
