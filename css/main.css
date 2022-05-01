@@ -283,7 +283,7 @@
 
 /* 모바일 최소 해상도 부터 최대 450px 까지 */
 @media screen and (max-width:450px) {
-    .mainTodayArea{padding: 10px 0; position:}
+    .mainTodayArea{padding: 10px 0; position:relative;}
     .mainTodayArea a{border: 3px solid green; display: inline-block; }
     .mainTodayArea .time{
         min-width: 140px; display: block; 
